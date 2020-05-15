@@ -51,6 +51,42 @@ add some comments
 }
 ```
 ### Endpoints:
+#### List Tasks
+`GET /api/tasks`  
+Authentication requied, will return array of [Task](#Task), only possessed by login user
+
+
+#### Create Task
+`POST /api/tasks/:id`  
+Example request body:
+```
+{
+  "task": {
+    "title": "sleep a lot",
+    "cardId": 2
+  }
+}
+```
+Required fields: `title`, `cardId`
+Authentication requied, will return a [Task](#Task)
+
+#### Update Task
+`PUT /api/tasks/:id`  
+Example request body:
+```
+{
+  "task": {
+    "title": "sleep a lot",
+    "cardId": 2
+  }
+}
+```
+Required fields: none
+Authentication requied, will return a [Task](#Task)
+
+#### Delete Task
+`DELETE /api/tasks/:id`  
+Authentication requied
 
 ## License
 add license
