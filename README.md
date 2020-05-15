@@ -52,12 +52,14 @@ add some comments
 ```
 ### Endpoints:
 #### List Tasks
-`GET /api/tasks`  
+`GET /api/tasks`
+
 Authentication requied, will return array of [Task](#Task), only possessed by login user
 
 
 #### Create Task
-`POST /api/tasks/:id`  
+`POST /api/tasks/:id`
+
 Example request body:
 ```
 {
@@ -71,7 +73,8 @@ Required fields: `title`, `cardId`
 Authentication requied, will return a [Task](#Task)
 
 #### Update Task
-`PUT /api/tasks/:id`  
+`PUT /api/tasks/:id`
+
 Example request body:
 ```
 {
@@ -85,7 +88,8 @@ Required fields: none
 Authentication requied, will return a [Task](#Task)
 
 #### Delete Task
-`DELETE /api/tasks/:id`  
+`DELETE /api/tasks/:id`
+
 Authentication requied
 
 ## License
