@@ -1,9 +1,9 @@
-# kanban-api
+# todo-api
 
 add some comments
 
 ## Stack
-* Typescript (Type Definition)
+* Typescript (Static Typing)
 * Express (REST API)
 * Knex (SQL Query builder)
 * SQLite (Database)
