@@ -9,7 +9,7 @@ server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 // api を定義
 server.get("/api/helth", function (req, res) {
-    res.send({ val: "ok" });
+    res.send({ val: "!!!" });
 });
 var port = process.env.PORT;
 server.listen(port || 3000, function (err) {
