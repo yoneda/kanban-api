@@ -10,7 +10,7 @@ server.use(express.urlencoded({ extended: true }));
 
 // api を定義
 server.get("/api/helth", (req: Request, res: Response) => {
-  res.send({ val: "!!!" });
+  res.send({ val: "テスト" });
 });
 
 const port = process.env.PORT;
