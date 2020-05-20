@@ -25,18 +25,7 @@ add some comments
   }
 }
 ```
-#### Card
-```
-{
-  "card": {
-    "id": 1,
-    "title": "in progress",
-    "createdAt": "2020-5-5 10:00:00",
-    "updatedAt": "2020-5-5 10:00:00",
-    "user": "yoneda",
-  }
-}
-```
+
 #### Task
 ```
 {
@@ -91,6 +80,13 @@ Authentication requied, will return a [Task](#Task)
 `DELETE /api/tasks/:id`
 
 Authentication requied
+
+## Todo
+- [ ] more detail api spec
+- [ ] more detail typescript
+- [ ] add CI/CD and integrate newman tests
+- [ ] add newman tests
+- [ ] (experimental) generate postman api documents
 
 ## License
 add license
