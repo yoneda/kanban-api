@@ -82,12 +82,12 @@ Authentication requied, will return a [Task](#Task)
 Authentication requied
 
 ## Todo
-- [] more detail api spec
-- [] more detail typescript
-- [] add express-validator to ensure required fields
-- [] add CI/CD and integrate newman tests
-- [] add newman tests
-- [] (experimental) generate postman api documents
+- [ ] more detail api spec
+- [ ] more detail typescript
+- [ ] add express-validator to ensure required fields
+- [ ] add CI/CD and integrate newman tests
+- [ ] add newman tests
+- [ ] (experimental) generate postman api documents
 
 ## License
 add license
