@@ -16,7 +16,7 @@ add some comments
 more detail, read [API Document](api.md)
 
 ## Todo
-- [ ] more detail api spec
+- [X] more detail api spec
 - [ ] implement api
 - [ ] more detail typescript
 - [ ] add express-validator to ensure required fields
