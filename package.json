@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc:watch": "tsc --watch index.ts",
-    "nodemon:watch": "nodemon index.js",
+    "tsc:watch": "tsc --watch index.ts --outFile ./build/index.js  --module 'AMD'",
+    "nodemon:watch": "nodemon ./build/index.js",
     "dev:watch": "concurrently --kill-others 'npm run tsc:watch' 'npm run nodemon:watch'"
   },
   "repository": {
