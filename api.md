@@ -93,3 +93,48 @@ Optional fields: `title`, `checked`
 `DELETE /api/tasks/:id`
 
 Authentication required
+
+### Get a user
+`GET /api/users`
+
+Authentication required, returns a [User](#User)
+
+### Create a user
+`POST /api/users`
+
+Example request body:
+```
+{
+	"user":{
+		"mail": "yoneda@yoneda.com",
+		"pass": "yoneda",
+    "bio": "hello, world"
+	}
+}
+```
+
+No authentication required, returns a [User](#User)
+
+Required fields: `mail`, `pass`, Optional fields: `bio`
+
+### Update a user
+`PUT /api/users/:id`
+
+Example request body:
+```
+{
+	"user":{
+		"pass": "yoneda",
+    "bio": "hello, world"
+	}
+}
+```
+
+Authentication required, returns a [User](#User)
+
+Optional fields: `pass`, `bio`
+
+### Delete a user
+`DELETE /api/users/:id`
+
+Authentication required
