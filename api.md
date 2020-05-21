@@ -51,14 +51,45 @@ Required fields: `mail`, `pass`
 
 Authentication required
 
-### Check Authentication
-Check if your client has certificate for Simple Diary API.
+### List Tasks
+`GET /api/tasks`
 
-`GET /api/checkAuth`
+Authentication required, returnes array of [Task](#Task), possessed by an authenticated user.
 
-Authentication required, returns a [User](#User) and status code 200, when you didn't login, returnes 401 Unauthorized
+### Create a Task
+`POST /api/tasks`
 
-### List Notes
-`GET /api/notes`
+Example request body:
+```
+{
+  "task":{
+    "title": "wash my hands",
+    "checked": false,
+  }
+}
+```
+Authentication required, returns a [Task](#Task)
 
-Authentication required, returnes array of [Note](#Note), possessed by an authenticated user.
+Required fields: `title`, Optional fields: `checked`
+
+### Update a Task
+`PUT /api/tasks/:id`
+
+Example request body:
+```
+{
+  "task":{
+    "title": "wash my hands",
+    "checked": false,
+  }
+}
+```
+
+Authentication required, returns a [Task](#Task)
+
+Optional fields: `title`, `checked`
+
+### Delete a Task
+`DELETE /api/tasks/:id`
+
+Authentication required
