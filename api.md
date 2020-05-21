@@ -35,10 +35,10 @@
 Example request body:
 ```
 {
-	"user":{
-		"mail": "yoneda@yoneda.com",
-		"pass": "yoneda"
-	}
+  "user":{
+    "mail": "yoneda@yoneda.com",
+    "pass": "yoneda"
+  }
 }
 ```
 No authentication required, returns a [User](#User)
@@ -105,11 +105,11 @@ Authentication required, returns a [User](#User)
 Example request body:
 ```
 {
-	"user":{
-		"mail": "yoneda@yoneda.com",
-		"pass": "yoneda",
+  "user":{
+    "mail": "yoneda@yoneda.com",
+    "pass": "yoneda",
     "bio": "hello, world"
-	}
+  }
 }
 ```
 
@@ -123,10 +123,10 @@ Required fields: `mail`, `pass`, Optional fields: `bio`
 Example request body:
 ```
 {
-	"user":{
-		"pass": "yoneda",
+  "user":{
+    "pass": "yoneda",
     "bio": "hello, world"
-	}
+  }
 }
 ```
 
