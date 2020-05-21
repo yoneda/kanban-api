@@ -2,10 +2,10 @@
   "name": "todo-api",
   "version": "1.0.0",
   "description": "add some comments",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc:watch": "tsc --watch index.ts --outFile ./build/index.js  --module 'AMD'",
+    "tsc:watch": "tsc --watch index.ts --outDir 'build'",
     "nodemon:watch": "nodemon ./build/index.js",
     "dev:watch": "concurrently --kill-others 'npm run tsc:watch' 'npm run nodemon:watch'"
   },
