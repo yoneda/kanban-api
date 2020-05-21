@@ -83,6 +83,7 @@ Authentication requied
 
 ## Todo
 - [ ] more detail api spec
+- [ ] implement api
 - [ ] more detail typescript
 - [ ] add express-validator to ensure required fields
 - [ ] add CI/CD and integrate newman tests
