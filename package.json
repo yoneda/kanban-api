@@ -5,7 +5,7 @@
   "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc:watch": "tsc --watch index.ts --outDir 'build'",
+    "tsc:watch": "tsc --watch index.ts --outDir 'build' --esModuleInterop",
     "nodemon:watch": "nodemon ./build/index.js",
     "dev:watch": "concurrently --kill-others 'npm run tsc:watch' 'npm run nodemon:watch'"
   },
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@types/express": "^4.17.6",
     "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.3"
   }
 }

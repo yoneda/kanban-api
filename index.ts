@@ -1,7 +1,7 @@
 const express = require("express");
 import { Request, Response } from "express";
-const cookieParser = require("cookie-parser");
-const asyncHandler = require("express-async-handler");
+import cookieParser from "cookie-parser";
+import asyncHandler from "express-async-handler";
 
 const server = express();
 server.use(cookieParser());
