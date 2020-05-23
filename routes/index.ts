@@ -1,9 +1,9 @@
-const { Router } = require("express");
-const users = require("./users");
-const notes = require("./notes");
+import { Router } from "express";
+import users from "./users";
+import tasks from "./tasks";
 
 const router = Router();
 router.use("/users", users);
-router.use("/notes", notes);
+router.use("/tasks", tasks);
 
-module.exports = router;
+export default router;
