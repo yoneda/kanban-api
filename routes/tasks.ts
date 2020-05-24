@@ -4,7 +4,7 @@ import asyncHandler from "express-async-handler";
 
 const router = Router();
 
-router.get("/", async (req, res, next) => {
+router.get("/", async function(req, res, next) {
   res.send("GET /api/tasks");
 });
 
