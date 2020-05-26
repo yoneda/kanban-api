@@ -6,37 +6,45 @@ const initialDB = {
   users: [
     {
       id: 1,
-      mail: "test@test.com",
-      pass: "$2b$12$JnwQ9QUZWxo4qbam2fY98uplOjift9tKbF.DcQ6QleWcWgxwOsSpe",
-      github: "",
+      email: "yoneda@yoneda.com",
+      password: "",
+      bio: "hi, I like javascript",
+      createdAt: "2020-5-5 10:00:00",
     },
-    {
-      id: 2,
-      mail: "test2@test.com",
-      pass: "$2b$12$3NSBf0JMGhY0mACVlSG4r.mA5SlAmdhAiaSR2glHfVD/3P91jacuS",
-      github: "",
-    },
-  ],
-  bookmarks: [
     {
       id: 1,
-      title: "dev.to",
-      url: "https://dev.to/",
+      email: "tanaka@tanaka.com",
+      password: "",
+      bio: "hi, I like javascript",
+      createdAt: "2020-5-5 10:00:00",
+    },
+  ],
+  tasks: [
+    {
+      id: 1,
+      title: "clean my room",
+      checked: false,
+      createdAt: "2020-5-5 10:00:00",
+      updatedAt: "2020-5-5 10:00:00",
       user: 1,
     },
     {
       id: 2,
-      title: "Qiita",
-      url: "https://qiita.com/",
+      title: "go travel to fukuoka in Japan",
+      checked: false,
+      createdAt: "2020-5-5 10:00:00",
+      updatedAt: "2020-5-5 10:00:00",
       user: 1,
     },
     {
       id: 3,
-      title: "google",
-      url: "https://www.google.com/",
+      title: "wash my hands",
+      checked: false,
+      createdAt: "2020-5-5 10:00:00",
+      updatedAt: "2020-5-5 10:00:00",
       user: 2,
     },
-  ],
+  ]
 };
 
 const seed = async function () {
@@ -52,9 +60,8 @@ const migrate = async function () {
   return await knex.schema
     .createTable("users", (table) => {
       table.increments("id");
-      table.string("mail");
-      table.string("pass");
-      table.string("github");
+      table.string("email");
+      table.string("password");
     })
     .createTable("bookmarks", (table) => {
       table.increments("id");
