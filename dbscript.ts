@@ -12,7 +12,7 @@ const initialDB = {
       createdAt: "2020-5-5 10:00:00",
     },
     {
-      id: 1,
+      id: 2,
       email: "tanaka@tanaka.com",
       password: "",
       bio: "hi, I like javascript",
@@ -51,9 +51,9 @@ const seed = async function () {
   await knex("users")
     .del()
     .then(() => knex("users").insert(initialDB.users));
-  await knex("bookmarks")
+  await knex("tasks")
     .del()
-    .then(() => knex("bookmarks").insert(initialDB.bookmarks));
+    .then(() => knex("tasks").insert(initialDB.tasks));
 };
 
 const migrate = async function () {
@@ -62,17 +62,21 @@ const migrate = async function () {
       table.increments("id");
       table.string("email");
       table.string("password");
+      table.string("bio");
+      table.string("createdAt");
     })
-    .createTable("bookmarks", (table) => {
+    .createTable("tasks", (table) => {
       table.increments("id");
       table.string("title");
-      table.string("url");
+      table.boolean("checked");
+      table.string("createdAt");
+      table.string("updatedAt");
       table.integer("user");
     });
 };
 
 const drop = async function () {
-  await knex.schema.dropTable("users").dropTable("bookmarks");
+  await knex.schema.dropTable("users").dropTable("tasks");
 };
 
 (async function () {
